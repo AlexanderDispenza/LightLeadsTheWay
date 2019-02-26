@@ -4,16 +4,32 @@ using UnityEngine;
 
 public class PixelBoxPrompt : MonoBehaviour {
 
-    SpriteRenderer sr;
+   [SerializeField] private GameObject tileBox;
 
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+        tileBox.SetActive(false);
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            tileBox.SetActive(true);
+            Debug.Log("Inside Trigger");
+        }
+        else tileBox.SetActive(false);
+
+    }
+
+   
 }
