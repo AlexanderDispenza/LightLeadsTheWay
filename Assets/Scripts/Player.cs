@@ -23,7 +23,7 @@ public class Player : MonoBehaviour {
         tag = "Player";
 
         walkSpeed = 4.0f;
-        jumpPower = 9.0f;
+        jumpPower = 11.0f;
         
         if (!groundCheck)
         {
