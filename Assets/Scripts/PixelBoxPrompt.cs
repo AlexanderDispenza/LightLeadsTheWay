@@ -4,30 +4,28 @@ using UnityEngine;
 
 public class PixelBoxPrompt : MonoBehaviour {
 
-   [SerializeField] private GameObject tileBox;
-
-
+    bool isEnabled; 
 	// Use this for initialization
 	void Start ()
     {
-        tileBox.SetActive(false);
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
+        isEnabled = false;
+    }
+	
     private void OnTriggerStay2D(Collider2D collision)
     {
-
         if (collision.gameObject.CompareTag("Player"))
         {
-            tileBox.SetActive(true);
             Debug.Log("Inside Trigger");
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            isEnabled = true;
         }
-        else tileBox.SetActive(false);
+        else if (isEnabled == true && collision.gameObject.CompareTag("Player") == false)
+        {
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+        }
 
     }
 
