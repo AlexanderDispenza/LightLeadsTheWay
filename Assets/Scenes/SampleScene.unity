@@ -4798,7 +4798,7 @@ Transform:
   - {fileID: 2089812841}
   - {fileID: 1821040752}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &123945564
 GameObject:
@@ -13567,6 +13567,8 @@ GameObject:
   m_Component:
   - component: {fileID: 444289815}
   - component: {fileID: 444289814}
+  - component: {fileID: 444289817}
+  - component: {fileID: 444289816}
   m_Layer: 0
   m_Name: DoorWay
   m_TagString: Untagged
@@ -13631,8 +13633,45 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &444289816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444289813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d227656ac228360488164b474f9677e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: {fileID: 1415566208}
+--- !u!61 &444289817
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444289813}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000333786, y: -1.2196903}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.3333335, y: 5.3333335}
+    newSize: {x: 5.3333335, y: 5.3333335}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.1262584, y: 2.8939524}
+  m_EdgeRadius: 0
 --- !u!1 &446118228
 GameObject:
   m_ObjectHideFlags: 0
@@ -31613,7 +31652,7 @@ Transform:
   - {fileID: 988321537}
   - {fileID: 2012064125}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1028809643
 GameObject:
@@ -52376,7 +52415,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4224375595350914, guid: 4c2ab9370d64c254f945ba58d57725fb, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c2ab9370d64c254f945ba58d57725fb, type: 2}
