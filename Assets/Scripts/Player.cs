@@ -16,7 +16,11 @@ public class Player : MonoBehaviour {
     public LayerMask isGroundLayer;
 
     public Animator anim;
-   
+
+	[SerializeField]
+	GameObject codePanel;
+
+	public bool barrierUnlocked = false;
 	// Use this for initialization
 	void Start ()
     {
@@ -24,7 +28,9 @@ public class Player : MonoBehaviour {
 
         walkSpeed = 4.0f;
         jumpPower = 11.0f;
-        
+
+		codePanel.SetActive(false);
+
         if (!groundCheck)
         {
             groundCheck = GameObject.Find("GroundCheck").GetComponent<Transform>();
@@ -41,6 +47,11 @@ public class Player : MonoBehaviour {
 	void Update ()
     {
         float moveValue = Input.GetAxisRaw("Horizontal");
+
+		if (barrierUnlocked)
+		{
+			codePanel.SetActive(false);
+		}
 
         if (groundCheck)
         {
@@ -70,7 +81,24 @@ public class Player : MonoBehaviour {
 
     }
 
-    void flipSprite()
+	// check to see if player interacts with barrier 
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.gameObject.CompareTag("Barrier") && !barrierUnlocked)
+		{
+			codePanel.SetActive(true);
+		} 
+	}
+
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.gameObject.CompareTag("Barrier"))
+		{
+			codePanel.SetActive(false);
+		}
+	}
+
+	void flipSprite()
     {
         facingRight = !facingRight;
 
