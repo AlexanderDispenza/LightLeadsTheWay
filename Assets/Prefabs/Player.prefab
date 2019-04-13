@@ -72,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1027591211397872}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00000047683716, y: 2.4999995, z: -10}
+  m_LocalPosition: {x: 0, y: 0.7099998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4714401962297368}
@@ -98,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1556501308583366}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.191, y: -3.55, z: 0}
+  m_LocalPosition: {x: -5, y: -1.844927, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4516969337813698}
@@ -242,10 +242,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ff8aad8aab03341b85256057fad677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2d: {fileID: 50690633517372076}
   walkSpeed: 0
   jumpPower: 0
   facingRight: 1
+  canDoubleJump: 0
   isGrounded: 0
   groundCheck: {fileID: 4516969337813698}
   groundCheckRad: 0.1
@@ -253,6 +253,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   anim: {fileID: 95565270778025454}
+  powerUpTime: 0
+  jumpBoost: 0
+  codePanel: {fileID: 0}
+  barrierUnlocked: 0
+  sceneName: 
 --- !u!114 &114904704988422340
 MonoBehaviour:
   m_ObjectHideFlags: 1

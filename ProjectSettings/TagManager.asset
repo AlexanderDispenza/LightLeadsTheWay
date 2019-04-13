@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Barrier
+  - JumpBoostPowerUp
+  - KillZone
+  - Enemy
+  - EnemyBlocker
   layers:
   - Default
   - TransparentFX
